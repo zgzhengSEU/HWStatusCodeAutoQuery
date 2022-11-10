@@ -34,3 +34,7 @@
 ### 4给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
+
+### 参考
+
+https://www.nowcoder.com/discuss/1093196
