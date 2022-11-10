@@ -1,7 +1,7 @@
 name: HW Statue Code Auto Query
 on:
   schedule:
-    - cron: '10 00 * * *'
+    - cron: '00 00 * * *'
     # cron表达式，时区是UTC时间，比我们早8小时，如上所表示的是每天UTC时间的22点05分整， 北京时间的06点05分（24小时制）
     # 可在此网站查询UTC时间和北京时间的换算关系 https://datetime360.com/cn/utc-beijing-time/
   watch:
