@@ -1,0 +1,33 @@
+name: HW Statue Code Auto Query
+on:
+  schedule:
+    - cron: '10 00 * * *'
+    # cron表达式，时区是UTC时间，比我们早8小时，如上所表示的是每天UTC时间的22点05分整， 北京时间的06点05分（24小时制）
+    # 可在此网站查询UTC时间和北京时间的换算关系 https://datetime360.com/cn/utc-beijing-time/
+  watch:
+    types: started
+
+jobs:
+  Leave:
+    runs-on: ubuntu-latest
+    # if: github.event.repository.owner.id == github.event.sender.id
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+    - name: Run
+      env:
+        TZ: Asia/Shanghai
+        uid: ${{ secrets.uid }}
+        password: ${{ secrets.password }}
+        email: ${{ secrets.email }}
+        emailcode: ${{ secrets.emailcode }}
+      run: |
+        sudo apt-get install python3-setuptools -y
+        git clone https://github.com/zgzhengSEU/HWStatusCodeQuery.git
+        cp -r HWStatusCodeQuery/* .
+        pip3 install -r requirements.txt
+        python3 query.py
