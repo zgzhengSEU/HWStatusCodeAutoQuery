@@ -1,7 +1,7 @@
 # 华为状态码自动查询工具
 
-![Stars](https://img.shields.io/github/stars/quzard/SEU_Auto_Leave.svg)
-![Forks](https://img.shields.io/github/forks/quzard/SEU_Auto_Leave.svg)
+![Stars](https://img.shields.io/github/stars/zgzhengSEU/HWStatusCodeAutoQuery.svg)
+![Forks](https://img.shields.io/github/forks/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 
 ## 使用步骤
 
