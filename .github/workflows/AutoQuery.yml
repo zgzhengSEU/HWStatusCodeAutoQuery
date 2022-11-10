@@ -27,7 +27,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
       run: |
         sudo apt-get install python3-setuptools -y
-        git clone https://github.com/zgzhengSEU/HWStatusCodeQuery.git
+        git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
         cp -r HWStatusCodeQuery/* .
         pip3 install -r requirements.txt
         python3 query.py
