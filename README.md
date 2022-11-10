@@ -31,10 +31,14 @@
 | EMAIL      | 邮件地址                                                     |
 | EMAILCODE  | 邮件授权码                                                   |
 
+邮件授权码可以百度一下怎么生成。例如QQ邮箱：设置-> 账户->POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务
+
+![056V7DNYS8VR$DK~R{MWCT7](https://user-images.githubusercontent.com/62554593/201148676-796927c2-2e98-4208-8763-ca5bbefbf902.png)
+
+![2)OEIE9}$Z06DOF} W 8BAV](https://user-images.githubusercontent.com/62554593/201148533-27fb2038-8588-49de-97b0-dac2f86d9565.png)
+
+
 ### 4给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
 
-### 参考
-
-https://www.nowcoder.com/discuss/1093196
