@@ -39,7 +39,7 @@
 ![2)OEIE9}$Z06DOF} W 8BAV](https://user-images.githubusercontent.com/62554593/201148533-27fb2038-8588-49de-97b0-dac2f86d9565.png)
 
 
-### 4给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
+### 4 给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
 
