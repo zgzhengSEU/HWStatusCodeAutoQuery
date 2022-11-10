@@ -6,7 +6,8 @@
 
 ## 使用步骤
 
-1. 首先 fork 本项目到自己的仓库
+1. 首先点击右上角 fork 本项目到自己的仓库
+  ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211102351300.png)
 
 2. 去 Actions 那 Enable Workflow
 
