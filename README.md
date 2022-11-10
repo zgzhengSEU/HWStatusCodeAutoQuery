@@ -16,10 +16,13 @@
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110000533.png)
 
-![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
-### 3 进入自己 fork 的仓库，点击 Settings -> Secrets -> New repository secret，它们将作为配置项，在应用启动时传入程序。
+### 3 进入自己 fork 的仓库，点击 Settings -> Secrets -> New repository secret，添加下列Secret供脚本使用。
 
-**所有的可用 Secrets 及说明**
+![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110006864.png)
+
+![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110007092.png)
+
+必须填写下面所有的secret
 
 | Secret     | 解释                                                         |
 | ---------- | ------------------------------------------------------------ |
@@ -28,4 +31,6 @@
 | EMAIL      | 邮件地址                                                     |
 | EMAILCODE  | 邮件授权码                                                   |
 
-### 4给自己的仓库点star，启动脚本
+### 4给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
+
+![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
