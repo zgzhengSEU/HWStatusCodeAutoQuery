@@ -62,26 +62,26 @@ def queryStatus(uid, password, email, passwd):
 
 
 if __name__ == "__main__":
-    if "uid" in os.environ:
-        uid = os.environ["uid"]
+    if "UID" in os.environ:
+        uid = os.environ["UID"]
     else:
         print("未找到 uid")
         sys.exit(1)
 
-    if "password" in os.environ:
-        password = os.environ["password"]
+    if "PASSWORD" in os.environ:
+        password = os.environ["PASSWORD"]
     else:
         print("未找到 password")
         sys.exit(1)
 
-    if "email" in os.environ:
-        your_email = os.environ["email"]
+    if "EMAIL" in os.environ:
+        your_email = os.environ["EMAIL"]
     else:
         print("未找到 email")
         sys.exit(1)
 
-    if "emailcode" in os.environ:
-        email_password = os.environ["emailcode"]
+    if "EMAILCODE" in os.environ:
+        email_password = os.environ["EMAILCODE"]
     else:
         print("未找到 email_password")
         sys.exit(1)
