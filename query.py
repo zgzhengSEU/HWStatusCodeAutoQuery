@@ -61,10 +61,30 @@ def queryStatus(uid, password, email, passwd):
 
 
 if __name__ == "__main__":
-    uid = '你的账户名'
-    password = '密码'
-    your_email = '用于发送接受提醒的邮箱，只能QQ邮箱'
-    email_password = '邮箱授权码，获取方式请自行搜索'
+    if "uid" in os.environ:
+        uid = os.environ["uid"]
+    else:
+        print("未找到 uid")
+        sys.exit(1)
+
+    if "password" in os.environ:
+        password = os.environ["password"]
+    else:
+        print("未找到 password")
+        sys.exit(1)
+
+    if "email" in os.environ:
+        your_email = os.environ["email"]
+    else:
+        print("未找到 email")
+        sys.exit(1)
+
+    if "emailcode" in os.environ:
+        email_password = os.environ["emailcode"]
+    else:
+        print("未找到 email_password")
+        sys.exit(1)
+        
     queryInterval = 1800  # 默认半小时查询一次
     try:
         while True:
