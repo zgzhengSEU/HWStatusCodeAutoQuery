@@ -31,8 +31,8 @@ def sendEmailtest(email, passwd):
     sender_qq = email
     pwd = passwd
     receiver = [email]
-    mail_title = '华为状态码脚本运行中！！！'
-    mail_content = "华为状态码脚本运行中"
+    mail_title = '华为状态码脚本启动成功，正在运行中！'
+    mail_content = "华为状态码脚本启动成功，正在运行中！"
     msg = MIMEMultipart()
     msg["Subject"] = Header(mail_title, 'utf-8')
     msg["From"] = sender_qq
@@ -83,25 +83,25 @@ if __name__ == "__main__":
     if "UID" in os.environ:
         uid = os.environ["UID"]
     else:
-        print("未找到 uid")
+        print("未找到 UID")
         sys.exit(1)
 
     if "PASSWORD" in os.environ:
         password = os.environ["PASSWORD"]
     else:
-        print("未找到 password")
+        print("未找到 PASSWORD")
         sys.exit(1)
 
     if "EMAIL" in os.environ:
         your_email = os.environ["EMAIL"]
     else:
-        print("未找到 email")
+        print("未找到 EMAIL")
         sys.exit(1)
 
     if "EMAILCODE" in os.environ:
         email_password = os.environ["EMAILCODE"]
     else:
-        print("未找到 email_password")
+        print("未找到 EMAILCODE")
         sys.exit(1)
         
     queryInterval = 1800  # 默认半小时查询一次
