@@ -52,6 +52,7 @@ def queryStatus(uid, password, email, passwd):
     html_src = session.get(url, timeout=5, headers=headers)
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
+    sendEmail(email, passwd) # 测试
     if res_list[0].split(':')[0] == '"IV_DATE"':
         sendEmail(email, passwd)
         sys.exit()
