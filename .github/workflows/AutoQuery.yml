@@ -21,10 +21,10 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        uid: ${{ secrets.uid }}
-        password: ${{ secrets.password }}
-        email: ${{ secrets.email }}
-        emailcode: ${{ secrets.emailcode }}
+        UID: ${{ secrets.UID }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        EMAILCODE: ${{ secrets.EMAILCODE }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeQuery.git
