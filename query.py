@@ -1,5 +1,6 @@
 import sys
 import time
+import os
 import requests
 from datetime import datetime
 from smtplib import SMTP_SSL
