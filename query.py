@@ -26,6 +26,22 @@ def sendEmail(email, passwd):
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
+def sendEmailtest(email, passwd):
+    host_server = 'smtp.qq.com'
+    sender_qq = email
+    pwd = passwd
+    receiver = [email]
+    mail_title = '华为状态码脚本运行中！！！'
+    mail_content = "华为状态码脚本运行中"
+    msg = MIMEMultipart()
+    msg["Subject"] = Header(mail_title, 'utf-8')
+    msg["From"] = sender_qq
+    msg['To'] = ";".join(receiver)
+    msg.attach(MIMEText(mail_content, 'plain', 'utf-8'))
+    smtp = SMTP_SSL(host_server)
+    smtp.login(sender_qq, pwd)
+    smtp.sendmail(sender_qq, receiver, msg.as_string())
+    smtp.quit()
 
 def queryStatus(uid, password, email, passwd):
     session = requests.session()
@@ -53,13 +69,14 @@ def queryStatus(uid, password, email, passwd):
     html_src = session.get(url, timeout=5, headers=headers)
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-    sendEmail(email, passwd) # 测试
+    
     if res_list[0].split(':')[0] == '"IV_DATE"':
         sendEmail(email, passwd)
         sys.exit()
     for res in res_list:
         print(res)
     print()
+
 
 
 if __name__ == "__main__":
@@ -88,6 +105,8 @@ if __name__ == "__main__":
         sys.exit(1)
         
     queryInterval = 1800  # 默认半小时查询一次
+    
+    sendEmailtest(your_email, email_password) # 测试
     try:
         while True:
             queryStatus(uid, password, your_email, email_password)
