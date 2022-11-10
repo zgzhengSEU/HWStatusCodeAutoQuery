@@ -1,5 +1,6 @@
 # 华为状态码自动查询工具
-华为状态码自动查询工具，全天候24h监测状态码，爱信等ALL IN！！！
+**华为状态码自动查询工具，全天候24h监测状态码，爱信等ALL IN ！！！**
+**状态码变了后会发邮件到设定的邮箱！**
 
 ![Stars](https://img.shields.io/github/stars/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 ![Forks](https://img.shields.io/github/forks/zgzhengSEU/HWStatusCodeAutoQuery.svg)
@@ -22,7 +23,7 @@
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110007092.png)
 
-必须填写下面所有的secret
+**必须填写下面所有的secret**
 
 | Secret     | 解释                                                         |
 | ---------- | ------------------------------------------------------------ |
