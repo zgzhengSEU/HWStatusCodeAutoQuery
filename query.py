@@ -26,13 +26,13 @@ def sendEmail(email, passwd):
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
-def sendEmailtest(email, passwd):
+def sendEmailStart(email, passwd):
     host_server = 'smtp.qq.com'
     sender_qq = email
     pwd = passwd
     receiver = [email]
-    mail_title = '华为状态码脚本启动成功，正在运行中！'
-    mail_content = "华为状态码脚本启动成功，正在运行中！"
+    mail_title = '今日华为状态码脚本启动成功，正在运行中，早日offer！'
+    mail_content = "今日华为状态码脚本启动成功，正在运行中，早日offer！"
     msg = MIMEMultipart()
     msg["Subject"] = Header(mail_title, 'utf-8')
     msg["From"] = sender_qq
@@ -106,7 +106,9 @@ if __name__ == "__main__":
         
     queryInterval = 1800  # 默认半小时查询一次
     
-    sendEmailtest(your_email, email_password) # 测试
+    if len(sys.argv) > 0:
+        sendEmailStart(your_email, email_password) # 测试
+    
     try:
         while True:
             queryStatus(uid, password, your_email, email_password)
