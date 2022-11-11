@@ -41,7 +41,7 @@ def sendEmailStart(email, passwd, host_server):
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
-def queryStatus(uid, password, email, passwd):
+def queryStatus(uid, password, email, passwd, host_server):
     session = requests.session()
     data = {'uid': uid,
             'password': password,
@@ -69,7 +69,7 @@ def queryStatus(uid, password, email, passwd):
     res_list = res.split('{')[1][:-2].split(',')
     
     if res_list[0].split(':')[0] == '"IV_DATE"':
-        sendEmail(email, passwd)
+        sendEmail(email, passwd, host_server)
         sys.exit()
     for res in res_list:
         print(res)
