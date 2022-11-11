@@ -82,7 +82,13 @@ if __name__ == "__main__":
         uid = os.environ["UID"]
     else:
         print("未找到 UID")
-        sys.exit(1)
+        # sys.exit(1)
+
+    if "HWUID" in os.environ:
+        uid = os.environ["HWUID"]
+    else:
+        print("未找到 HWUID")
+        # sys.exit(1)
 
     if "PASSWORD" in os.environ:
         password = os.environ["PASSWORD"]
