@@ -7,7 +7,7 @@
 
 ## 使用步骤
 
-### 1 首先点击右上角 fork 本项目到自己的仓库
+### 1 点击右上角 fork 脚本到自己的仓库（顺手star一下）
   
   ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211102351300.png)
 
