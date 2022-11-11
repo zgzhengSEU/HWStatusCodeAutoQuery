@@ -115,7 +115,7 @@ if __name__ == "__main__":
     try:
         while True:
             cur_time = datetime.now()
-            if (cur_time - start_time).seconds > 30:
+            if (cur_time - start_time).seconds < 30:
                 break
             queryStatus(uid, password, your_email, email_password)
             time.sleep(queryInterval)
