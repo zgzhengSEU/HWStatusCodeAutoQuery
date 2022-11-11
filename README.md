@@ -7,11 +7,11 @@
 
 ## 使用步骤
 
-### 1 点击右上角 fork 脚本到自己的仓库（顺手star一下）
+### 1 点个小星星⭐ fork 脚本到自己的仓库~
   
-![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211111308493.png)
+![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211111311139.png)
 
-### 2 去 Actions 那 Enable Workflow
+### 2 进入 Actions 并 Enable Workflow
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211102359648.png)
 
@@ -39,7 +39,7 @@
 ![2)OEIE9}$Z06DOF} W 8BAV](https://user-images.githubusercontent.com/62554593/201148533-27fb2038-8588-49de-97b0-dac2f86d9565.png)
 
 
-### 4 给自己的仓库点star，可以手动启动脚本，脚本也会每天定时启动
+### 4 给自己的仓库点star，可以手动启动脚本。脚本也会每天定时启动
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
 
