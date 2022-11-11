@@ -32,6 +32,8 @@
 | EMAIL      | 邮件地址                                                     |
 | EMAILCODE  | 邮件授权码                                                   |
 
+![C_SO~T93~~~Y5 L7OJS6 PH](https://user-images.githubusercontent.com/62554593/201273620-1e57d6ea-3f11-48f0-b08b-0efd6ea9c3a2.png)
+
 邮件授权码可以百度一下怎么生成。例如QQ邮箱：设置-> 账户->POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务
 
 ![056V7DNYS8VR$DK~R{MWCT7](https://user-images.githubusercontent.com/62554593/201148676-796927c2-2e98-4208-8763-ca5bbefbf902.png)
