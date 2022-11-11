@@ -30,11 +30,10 @@
 | HWUID      | 必填 | 用户名，登录华为官网的账号                                                       |
 | PASSWORD   | 必填 | 密码，登录华为官网的账号密码                                                      |
 | EMAIL      | 必填 | 邮箱地址                                                                          |
-| EMAILCODE  | 必填 | 邮箱密码/授权码                                                                   |
+| EMAILCODE  | 必填 | 邮箱密码/授权码。有的邮箱安全设置要求用授权码，如QQ邮箱。没有授权码要求的可以直接用邮箱密码 |
 | STMP       | 选填 | 不填则默认使用QQ邮箱。使用其他邮箱需要设置，如stmp.163.com、stmp.seu.edu.cn, 一般为stmp.邮箱域名 |
 | NOTIFY     | 选填 | 不填默认开启每日通知。每日定时启动脚本时，是否发送提醒脚本运行成功邮件。填true/false。  |
 
-![C_SO~T93~~~Y5 L7OJS6 PH](https://user-images.githubusercontent.com/62554593/201273620-1e57d6ea-3f11-48f0-b08b-0efd6ea9c3a2.png)
 
 [QQ邮件授权码设置教程,其他邮箱类似](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28)。设置-> 账户->POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务
 
