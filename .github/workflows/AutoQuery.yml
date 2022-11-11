@@ -10,7 +10,7 @@ on:
 jobs:
   HWStatueCodeAutoQuery1:
     runs-on: ubuntu-20.04
-    # if: github.event.repository.owner.id == github.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.id
     
     steps:
     - name: Checkout Repository
@@ -30,7 +30,7 @@ jobs:
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
         cp -r HWStatusCodeAutoQuery/* .
         pip3 install -r requirements.txt
-        python3 query.py start
+        python3 query.py
         
   HWStatueCodeAutoQuery2:
     needs: HWStatueCodeAutoQuery1
