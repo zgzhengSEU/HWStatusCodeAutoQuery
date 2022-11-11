@@ -25,6 +25,7 @@ def sendEmail(email, passwd, host_server):
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
+
 def sendEmailStart(email, passwd, host_server):
     sender_qq = email
     pwd = passwd
@@ -40,6 +41,7 @@ def sendEmailStart(email, passwd, host_server):
     smtp.login(sender_qq, pwd)
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
+
 
 def queryStatus(uid, password, email, passwd, host_server):
     session = requests.session()
@@ -67,14 +69,13 @@ def queryStatus(uid, password, email, passwd, host_server):
     html_src = session.get(url, timeout=5, headers=headers)
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-    
+
     if res_list[0].split(':')[0] == '"IV_DATE"':
         sendEmail(email, passwd, host_server)
         sys.exit()
     for res in res_list:
         print(res)
     print()
-
 
 
 if __name__ == "__main__":
@@ -112,7 +113,7 @@ if __name__ == "__main__":
         host_server = os.environ["STMP"]
     else:
         host_server = 'smtp.qq.com'
-    
+
     if "NOTIFY" in os.environ:
         notify = os.environ["NOTIFY"]
         if notify.lower() == "true":
@@ -121,11 +122,11 @@ if __name__ == "__main__":
             notify = False
     else:
         notify = True
-    
+
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
-        sendEmailStart(your_email, email_password, host_server) 
-    
+        sendEmailStart(your_email, email_password, host_server)
+
     queryInterval = 1800  # 默认半小时查询一次
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
@@ -137,5 +138,5 @@ if __name__ == "__main__":
             time.sleep(queryInterval)
     except:
         print('出错了请关闭梯子后重新运行')
-    
+
     print("[", datetime.now(), "] ", "当前job成功运行6小时，切换下一个job")
