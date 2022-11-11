@@ -21,7 +21,7 @@
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110006864.png)
 
-![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110007092.png)
+![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211111323769.png)
 
 **必须填写下面所有的secret**
 
