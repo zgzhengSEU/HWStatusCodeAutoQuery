@@ -116,9 +116,10 @@ if __name__ == "__main__":
         while True:
             cur_time = datetime.now()
             if (cur_time - start_time).seconds > 30:
-                print("[", cur_time, "] ", "当前job成功运行6小时，切换下一个job")
                 break
             queryStatus(uid, password, your_email, email_password)
             time.sleep(queryInterval)
     except:
         print('出错了请关闭梯子后重新运行')
+    
+    print("[", datetime.now(), "] ", "当前job成功运行6小时，切换下一个job")
