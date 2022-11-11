@@ -43,5 +43,7 @@
 
 ### 4 给自己的仓库点star，可以手动启动脚本。脚本也会每天定时启动
 
-![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211110003041.png)
+启动后可以点进运行的workflow看看运行状态，如果出错，会报错误信息
+
+![{51 2A2{7G8{OSQ`E2$0(UP](https://user-images.githubusercontent.com/62554593/201295883-efe0d151-c1ff-4664-88cb-9e38ce1b65a3.png)
 
