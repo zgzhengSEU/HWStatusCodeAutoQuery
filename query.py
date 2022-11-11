@@ -105,7 +105,7 @@ if __name__ == "__main__":
     if "EMAILCODE" in os.environ:
         email_password = os.environ["EMAILCODE"]
     else:
-        print("未找到 EMAILCODE")
+        print("未找到 EMAILCODE！")
         sys.exit(1)
 
     if "STMP" in os.environ:
