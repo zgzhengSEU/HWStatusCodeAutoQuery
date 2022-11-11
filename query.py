@@ -113,12 +113,20 @@ if __name__ == "__main__":
     else:
         host_server = 'smtp.qq.com'
     
+    if "NOTIFY" in os.environ:
+        notify = os.environ["NOTIFY"]
+        if notify.lower() == "true":
+            notify = True
+        else:
+            notify = False
+    else:
+        notify = True
+    
+    if notify:
+        # 每天脚本定时运行时，发送启动成功提醒
+        sendEmailStart(your_email, email_password, host_server) 
+    
     queryInterval = 1800  # 默认半小时查询一次
-    
-    if len(sys.argv) > 0:
-        sendEmailStart(your_email, email_password, host_server) # 测试
-    
-    
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
     try:
