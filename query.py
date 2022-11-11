@@ -9,8 +9,7 @@ from email.mime.multipart import MIMEMultipart
 from email.header import Header
 
 
-def sendEmail(email, passwd):
-    host_server = 'smtp.qq.com'
+def sendEmail(email, passwd, host_server):
     sender_qq = email
     pwd = passwd
     receiver = [email]
@@ -26,8 +25,7 @@ def sendEmail(email, passwd):
     smtp.sendmail(sender_qq, receiver, msg.as_string())
     smtp.quit()
 
-def sendEmailStart(email, passwd):
-    host_server = 'smtp.qq.com'
+def sendEmailStart(email, passwd, host_server):
     sender_qq = email
     pwd = passwd
     receiver = [email]
@@ -103,11 +101,16 @@ if __name__ == "__main__":
     else:
         print("未找到 EMAILCODE")
         sys.exit(1)
-        
+
+    if "STMP" in os.environ:
+        host_server = os.environ["STMP"]
+    else:
+        host_server = 'smtp.qq.com'
+    
     queryInterval = 1800  # 默认半小时查询一次
     
     if len(sys.argv) > 0:
-        sendEmailStart(your_email, email_password) # 测试
+        sendEmailStart(your_email, email_password, host_server) # 测试
     
     
     start_time = datetime.now()
@@ -116,7 +119,7 @@ if __name__ == "__main__":
         while True:
             if (datetime.now() - start_time).seconds > 21000:
                 break
-            queryStatus(uid, password, your_email, email_password)
+            queryStatus(uid, password, your_email, email_password, host_server)
             time.sleep(queryInterval)
     except:
         print('出错了请关闭梯子后重新运行')
