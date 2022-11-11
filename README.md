@@ -11,7 +11,7 @@
   
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211111311139.png)
 
-### 2 进入 Actions 并 Enable Workflow
+### 2 进入自己 fork 的仓库，进入 Actions 并 Enable Workflow
 
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211102359648.png)
 
