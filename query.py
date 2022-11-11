@@ -114,7 +114,7 @@ if __name__ == "__main__":
     print("[", start_time, "] ", "启动当前job")
     try:
         while True:
-            if (datetime.now() - start_time).seconds > 21600:
+            if (datetime.now() - start_time).seconds > 21000:
                 break
             queryStatus(uid, password, your_email, email_password)
             time.sleep(queryInterval)
