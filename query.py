@@ -111,7 +111,7 @@ if __name__ == "__main__":
     
     
     start_time = datetime.now()
-    print("启动当前job, 启动时间："start_time)
+    print("启动当前job, 启动时间：", start_time)
     try:
         while True:
             cur_time = datetime.now()
