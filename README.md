@@ -7,7 +7,7 @@
 
 ## 使用步骤
 
-### 1 点个小星星⭐ fork 脚本到自己的仓库~
+### 1 右上角点个小星星⭐ fork 脚本到自己的仓库~
   
 ![](https://cdn.jsdelivr.net/gh/zgzhengSEU/imagebed/Image/202211111311139.png)
 
