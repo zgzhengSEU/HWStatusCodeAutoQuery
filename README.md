@@ -54,4 +54,5 @@
 
 ### 参考
 
-@xyllq999
+[@xyllq999](https://github.com/xyllq999/HwStatusCode)
+https://www.nowcoder.com/discuss/1093196?channel=-1&source_id=discuss_terminal_discuss_history_nctrack&ncTraceId=0efae7191ce247278d93842b70441cc5.1009.16682407933417590
