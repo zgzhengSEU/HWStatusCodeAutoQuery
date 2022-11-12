@@ -130,6 +130,7 @@ if __name__ == "__main__":
     queryInterval = 1800  # 默认半小时查询一次
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
+    
     try:
         while True:
             if (datetime.now() - start_time).seconds > 18000:
