@@ -106,3 +106,28 @@ jobs:
         cp -r HWStatusCodeAutoQuery/* .
         pip3 install -r requirements.txt
         python3 query.py
+
+  HWStatueCodeAutoQuery5:
+    needs: [HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3, HWStatueCodeAutoQuery4] 
+    runs-on: ubuntu-20.04
+    # if: github.event.repository.owner.id == github.event.sender.id
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+    - name: Run
+      env:
+        TZ: Asia/Shanghai
+        UID: ${{ secrets.UID }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        EMAILCODE: ${{ secrets.EMAILCODE }}
+      run: |
+        sudo apt-get install python3-setuptools -y
+        git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
+        cp -r HWStatusCodeAutoQuery/* .
+        pip3 install -r requirements.txt
+        python3 query.py
