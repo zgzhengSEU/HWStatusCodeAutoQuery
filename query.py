@@ -140,4 +140,4 @@ if __name__ == "__main__":
     except:
         print('出错了请关闭梯子后重新运行')
 
-    print("[", datetime.now(), "] ", "当前job成功运行6小时，切换下一个job")
+    print("[", datetime.now(), "] ", "当前job成功运行5小时，切换下一个job")
