@@ -52,6 +52,13 @@
 
 ![image](https://user-images.githubusercontent.com/62554593/201296761-85cd60af-7e72-4311-85e1-d0f2ac985600.png)
 
+workflow运行完成：
+![image](https://user-images.githubusercontent.com/62554593/201655891-34e20847-883b-4cbb-808a-cadc97d7643f.png)
+
+运行出错，可查看具体错误信息，如没设置好邮箱授权码：
+![image](https://user-images.githubusercontent.com/62554593/201655792-7991f696-dd24-4043-ac8e-c08d5085552f.png)
+
+
 ### 参考
 
 [@xyllq999](https://github.com/xyllq999/HwStatusCode)
