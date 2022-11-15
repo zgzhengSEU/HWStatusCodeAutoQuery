@@ -67,17 +67,17 @@ def queryStatus(uid, password, email, passwd, host_server):
     url = 'https://career.huawei.com/reccampportal/services/portal/portaluser/queryMyJobInterviewPortal5?reqTime='
     url = url + str(time)
     html_src = session.get(url, timeout=5, headers=headers)
+    logout_url = 'https://uniportal.huawei.com/uniportal/logout.do?redirect=http://career.huawei.com/reccampportal/&lang=en'
+    session.get(logout_url, timeout=5, headers=headers)  # 新增退出登录逻辑
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-
     if res_list[0].split(':')[0] == '"IV_DATE"':
         sendEmail(email, passwd, host_server)
         sys.exit()
     for res in res_list:
         print(res)
     print()
-
-
+    
 if __name__ == "__main__":
     if "UID" in os.environ:
         uid = os.environ["UID"]
