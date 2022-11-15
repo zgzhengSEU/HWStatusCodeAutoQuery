@@ -5,6 +5,8 @@
 ![Stars](https://img.shields.io/github/stars/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 ![Forks](https://img.shields.io/github/forks/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 
+有问题提Issues
+
 ## 使用步骤
 
 ### 1 右上角点个小星星⭐ fork 脚本到自己的仓库~
