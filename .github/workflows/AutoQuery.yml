@@ -22,9 +22,12 @@ jobs:
       env:
         TZ: Asia/Shanghai
         UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -47,9 +50,12 @@ jobs:
       env:
         TZ: Asia/Shanghai
         UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -72,9 +78,12 @@ jobs:
       env:
         TZ: Asia/Shanghai
         UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -97,9 +106,12 @@ jobs:
       env:
         TZ: Asia/Shanghai
         UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -122,9 +134,12 @@ jobs:
       env:
         TZ: Asia/Shanghai
         UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
