@@ -85,7 +85,7 @@ def queryStatus(uid, password, email, passwd, host_server):
     return False
 
 
-def work(uid, password, your_email, email_password, host_server):
+def work(uid, password, your_email, email_password, host_server, start_time):
     try:
         while True:
             if (datetime.now() - start_time).seconds > 18000:
@@ -94,7 +94,7 @@ def work(uid, password, your_email, email_password, host_server):
                 break
             time.sleep(queryInterval)
     except:
-        work(uid, password, your_email, email_password, host_server)
+        work(uid, password, your_email, email_password, host_server, start_time)
 
         
 if __name__ == "__main__":
@@ -150,6 +150,6 @@ if __name__ == "__main__":
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
     
-    work(uid, password, your_email, email_password, host_server)
+    work(uid, password, your_email, email_password, host_server, start_time)
 
     print("[", datetime.now(), "] ", "当前job成功运行5小时，切换下一个job")
