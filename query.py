@@ -84,6 +84,7 @@ def queryStatus(uid, password, email, passwd, host_server):
     print()
     return False
 
+
 def work(uid, password, your_email, email_password, host_server):
     try:
         while True:
@@ -95,6 +96,7 @@ def work(uid, password, your_email, email_password, host_server):
     except:
         work(uid, password, your_email, email_password, host_server)
 
+        
 if __name__ == "__main__":
     if "UID" in os.environ:
         uid = os.environ["UID"]
