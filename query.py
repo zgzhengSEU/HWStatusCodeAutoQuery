@@ -67,17 +67,34 @@ def queryStatus(uid, password, email, passwd, host_server):
     url = 'https://career.huawei.com/reccampportal/services/portal/portaluser/queryMyJobInterviewPortal5?reqTime='
     url = url + str(time)
     html_src = session.get(url, timeout=5, headers=headers)
-    logout_url = 'https://uniportal.huawei.com/uniportal/logout.do?redirect=http://career.huawei.com/reccampportal/&lang=en'
+    logout_url = 'https://uniportal.huawei.com/uniportal/logout.do?redirect=http://career.huawei.com/reccampportal/&lang=zh'
     session.get(logout_url, timeout=5, headers=headers)  # 新增退出登录逻辑
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-    if res_list[0].split(':')[0] == '"IV_DATE"':
-        sendEmail(email, passwd, host_server)
-        sys.exit()
+    print("当前状态码为：")
     for res in res_list:
         print(res)
     print()
-    
+    if res_list[0].split(':')[0] == '"IV_DATE"':
+        sendEmail(email, passwd, host_server)
+        print("状态码变了！")
+        return True
+    else:
+        print("继续爱信等！")
+    print()
+    return False
+
+def work(uid, password, your_email, email_password, host_server):
+    try:
+        while True:
+            if (datetime.now() - start_time).seconds > 18000:
+                break
+            if queryStatus(uid, password, your_email, email_password, host_server):
+                break
+            time.sleep(queryInterval)
+    except:
+        work(uid, password, your_email, email_password, host_server)
+
 if __name__ == "__main__":
     if "UID" in os.environ:
         uid = os.environ["UID"]
@@ -131,13 +148,6 @@ if __name__ == "__main__":
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
     
-    try:
-        while True:
-            if (datetime.now() - start_time).seconds > 18000:
-                break
-            queryStatus(uid, password, your_email, email_password, host_server)
-            time.sleep(queryInterval)
-    except:
-        print('出错了请关闭梯子后重新运行')
+    work(uid, password, your_email, email_password, host_server)
 
     print("[", datetime.now(), "] ", "当前job成功运行5小时，切换下一个job")
