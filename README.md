@@ -5,7 +5,8 @@
 ![Stars](https://img.shields.io/github/stars/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 ![Forks](https://img.shields.io/github/forks/zgzhengSEU/HWStatusCodeAutoQuery.svg)
 
-有问题提Issues
+拉取最新代码
+有问题提Issues一起讨论
 
 ## 使用步骤
 
