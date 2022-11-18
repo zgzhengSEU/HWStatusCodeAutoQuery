@@ -130,6 +130,8 @@ if __name__ == "__main__":
 
     if "STMP" in os.environ:
         host_server = os.environ["STMP"]
+    elif "SMTP" in os.environ:
+        host_server = os.environ["SMTP"]
     else:
         host_server = 'smtp.qq.com'
 
