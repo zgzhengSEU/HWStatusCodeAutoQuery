@@ -28,6 +28,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
         STMP: ${{ secrets.STMP }}
+        DFI: ${{ secrets.DFI }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -56,6 +57,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
         STMP: ${{ secrets.STMP }}
+        DFI: ${{ secrets.DFI }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -84,6 +86,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
         STMP: ${{ secrets.STMP }}
+        DFI: ${{ secrets.DFI }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -112,6 +115,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
         STMP: ${{ secrets.STMP }}
+        DFI: ${{ secrets.DFI }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
@@ -140,6 +144,7 @@ jobs:
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
         STMP: ${{ secrets.STMP }}
+        DFI: ${{ secrets.DFI }}
       run: |
         sudo apt-get install python3-setuptools -y
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
