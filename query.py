@@ -43,7 +43,7 @@ def sendEmailStart(email, passwd, host_server):
     smtp.quit()
 
 
-def queryStatus(uid, password, email, passwd, host_server):
+def queryStatus(uid, password, email, passwd, host_server, deviceFingerInfo):
     session = requests.session()
     data = {'uid': uid,
             'password': password,
@@ -51,7 +51,7 @@ def queryStatus(uid, password, email, passwd, host_server):
             'lang': 'zh_CN',
             'redirect': 'https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D83760',
             'loginFlag': 'byUid',
-            'deviceFingerInfo': 'bb84ac09e32b0ce23d488372c91a81d6',
+            'deviceFingerInfo': deviceFingerInfo,
             'redirect_local': '',
             'redirect_modify': '',
             'getloginMethod': 'null',
@@ -84,16 +84,16 @@ def queryStatus(uid, password, email, passwd, host_server):
     return False
 
 
-def work(uid, password, your_email, email_password, host_server, start_time):
+def work(uid, password, your_email, email_password, host_server, start_time, deviceFingerInfo):
     try:
         while True:
             if (datetime.now() - start_time).seconds > 18000:
                 break
-            if queryStatus(uid, password, your_email, email_password, host_server):
+            if queryStatus(uid, password, your_email, email_password, host_server, deviceFingerInfo):
                 break
             time.sleep(queryInterval)
     except:
-        work(uid, password, your_email, email_password, host_server, start_time)
+        work(uid, password, your_email, email_password, host_server, start_time, deviceFingerInfo)
 
         
 if __name__ == "__main__":
@@ -142,7 +142,12 @@ if __name__ == "__main__":
             notify = False
     else:
         notify = True
-
+    
+    if "DFI" in os.environ:
+        deviceFingerInfo = os.environ["DFI"]
+    else:
+        deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
+    
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
         sendEmailStart(your_email, email_password, host_server)
@@ -150,7 +155,7 @@ if __name__ == "__main__":
     queryInterval = 1800  # 默认半小时查询一次
     start_time = datetime.now()
     print("[", start_time, "] ", "启动当前job")
-    
-    work(uid, password, your_email, email_password, host_server, start_time)
+
+    work(uid, password, your_email, email_password, host_server, start_time, deviceFingerInfo)
 
     print("[", datetime.now(), "] ", "当前job成功运行5小时，切换下一个job")
