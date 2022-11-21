@@ -42,7 +42,7 @@
 1. [点击登录页面](https://uniportal.huawei.com/uniportal/?redirect=https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D42881)
 2. 页面右键后点击检查，或者按F12打开开发工具，在元素里面按 CTRL+F 搜索 deviceFingerInfo，将 value 填入 secret
 ![image](https://user-images.githubusercontent.com/62554593/202986664-03230976-41de-4618-a132-189e493725fb.png)
-![image](https://user-images.githubusercontent.com/62554593/202986926-3fc04aad-5d34-4be9-be19-735fed2599c8.png)
+![image](https://user-images.githubusercontent.com/62554593/202988457-d83b972e-af32-46c8-9d6d-1570e559ecdc.png)
 
 
 **[QQ邮件授权码设置教程,其他邮箱类似](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28)**
