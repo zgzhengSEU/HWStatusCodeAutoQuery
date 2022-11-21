@@ -32,13 +32,21 @@
 | ---------- |------| ------------------------------------------------------------                    |
 | HWUID      | 必填 | 用户名，登录华为官网的账号                                                       |
 | PASSWORD   | 必填 | 密码，登录华为官网的账号密码                                                      |
+| DFI        | 必填 | deviceFingerInfo, 设置值见下文。用于避免"您的登录已失效，请重新登录，您也可以新打开一个页签登录，再回到本页面操作，请不要在同一浏览器里登录多个账户"错误|
 | EMAIL      | 必填 | 邮箱地址                                                                          |
 | EMAILCODE  | 必填 | 邮箱密码/授权码。有的邮箱安全设置要求用授权码，如QQ邮箱。没有授权码要求的可以直接用邮箱密码 |
 | SMTP       | 选填 | 不填则默认使用QQ邮箱。使用其他邮箱需要设置，如smtp.163.com、smtp.seu.edu.cn, 一般为stmp.邮箱域名 |
 | NOTIFY     | 选填 | 不填默认开启每日通知。每日定时启动脚本时，是否发送提醒脚本运行成功邮件。填true/false。  |
 
+**DFI设置教程** 
+1. [点击登录页面](https://uniportal.huawei.com/uniportal/?redirect=https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D42881)
+2. 页面右键后点击检查，或者按F12打开开发工具，在元素里面按 CTRL+F 搜索 deviceFingerInfo，将 value 填入 secret
+![image](https://user-images.githubusercontent.com/62554593/202986664-03230976-41de-4618-a132-189e493725fb.png)
+![image](https://user-images.githubusercontent.com/62554593/202986926-3fc04aad-5d34-4be9-be19-735fed2599c8.png)
 
-[QQ邮件授权码设置教程,其他邮箱类似](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28)。设置-> 账户->POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务
+
+**[QQ邮件授权码设置教程,其他邮箱类似](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001256&&id=28)**
+设置-> 账户->POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务
 
 ![056V7DNYS8VR$DK~R{MWCT7](https://user-images.githubusercontent.com/62554593/201148676-796927c2-2e98-4208-8763-ca5bbefbf902.png)
 
