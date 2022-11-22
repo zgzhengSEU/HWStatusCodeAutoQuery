@@ -100,69 +100,69 @@ if __name__ == "__main__":
     if "HWUID" in os.environ:
         hwuid = os.environ["HWUID"]
         if hwuid == '':
-            print("未找到 HWUID ！")
+            print("[", datetime.now(), "] ", "未找到 HWUID ！")
             sys.exit(1) 
     else:
-        print("未找到 HWUID ！")
+        print("[", datetime.now(), "] ", "未找到 HWUID ！")
         sys.exit(1)
 
     if "PASSWORD" in os.environ:
         password = os.environ["PASSWORD"]
         if password == '':
-            print("未找到 PASSWORD ！")
+            print("[", datetime.now(), "] ", "未找到 PASSWORD ！")
             sys.exit(1) 
     else:
-        print("未找到 PASSWORD ！")
+        print("[", datetime.now(), "] ", "未找到 PASSWORD ！")
         sys.exit(1)
 
     if "EMAIL" in os.environ:
         your_email = os.environ["EMAIL"]
         if your_email == '':
-            print("未找到 EMAIL ！")
+            print("[", datetime.now(), "] ", "未找到 EMAIL ！")
             sys.exit(1) 
     else:
-        print("未找到 EMAIL ！")
+        print("[", datetime.now(), "] ", "未找到 EMAIL ！")
         sys.exit(1)
 
     if "EMAILCODE" in os.environ:
         email_password = os.environ["EMAILCODE"]
         if email_password == '':
-            print("未找到 EMAILCODE ！")
+            print("[", datetime.now(), "] ", "未找到 EMAILCODE ！")
             sys.exit(1) 
     else:
-        print("未找到 EMAILCODE ！")
+        print("[", datetime.now(), "] ", "未找到 EMAILCODE ！")
         sys.exit(1)
 
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
         if host_server == '':
-            print("未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
+            print("[", datetime.now(), "] ", "未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
             host_server = 'smtp.qq.com'            
         else:
-            print("设置 SMTP 服务器为：", host_server)
+            print("[", datetime.now(), "] ", "设置 SMTP 服务器为：", host_server)
     else:
-        print("未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
+        print("[", datetime.now(), "] ", "未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
         host_server = 'smtp.qq.com'
 
     if "NOTIFY" in os.environ:
         notify = os.environ["NOTIFY"]
         if notify.lower() == "false":
             notify = False
-            print("关闭功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
+            print("[", datetime.now(), "] ", "关闭功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
         else:
             notify = True
-            print("开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
+            print("[", datetime.now(), "] ", "开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
     else:
         notify = True
-        print("开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
+        print("[", datetime.now(), "] ", "开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
     
     if "DFI" in os.environ:
         deviceFingerInfo = os.environ["DFI"]
         if deviceFingerInfo == '':
-            print("请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
+            print("[", datetime.now(), "] ", "请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
             deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     else:
-        print("请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
+        print("[", datetime.now(), "] ", "请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
     if len(sys.argv) == 2 and sys.argv[1] == 'test': # 添加快速测试
@@ -174,7 +174,7 @@ if __name__ == "__main__":
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
         if len(sys.argv) == 2 and sys.argv[1] == 'start':
-            print("发送 每天脚本定时运行成功提醒")
+            print("[", datetime.now(), "] ", "发送 每天脚本定时运行成功提醒")
             sendEmailStart(your_email, email_password, host_server)
 
     queryInterval = 1800  # 默认半小时查询一次
