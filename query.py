@@ -136,7 +136,7 @@ if __name__ == "__main__":
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
         if host_server == '':
-            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写SMTP，默认使用QQ邮箱)
+            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写SMTP，默认使用QQ邮箱")
             host_server = 'smtp.qq.com'            
         print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "当前 SMTP 服务器为：", host_server)
     else:
