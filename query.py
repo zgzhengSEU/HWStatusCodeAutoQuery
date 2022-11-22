@@ -127,10 +127,13 @@ if __name__ == "__main__":
 
     if "STMP" in os.environ: # 之前拼写错误的历史残留
         print("请填写SMTP，而不是STMP")
+        sys.exit(1)
         
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
+        print("SMTP 服务器为：", host_server)
     else:
+        print("默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
         host_server = 'smtp.qq.com'
 
     if "NOTIFY" in os.environ:
