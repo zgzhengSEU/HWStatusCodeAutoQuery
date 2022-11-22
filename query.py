@@ -105,7 +105,7 @@ if __name__ == "__main__":
         uid = os.environ["HWUID"]
     else:
         print("未找到 HWUID")
-        # sys.exit(1)
+        sys.exit(1)
 
     if "PASSWORD" in os.environ:
         password = os.environ["PASSWORD"]
@@ -145,6 +145,7 @@ if __name__ == "__main__":
     if "DFI" in os.environ:
         deviceFingerInfo = os.environ["DFI"]
     else:
+        print("请填写deviceFingerInfo，否则请检测是否运行成功，有可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
     if notify:
