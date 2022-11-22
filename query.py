@@ -127,9 +127,10 @@ if __name__ == "__main__":
         print("未找到 EMAILCODE！")
         sys.exit(1)
 
-    if "STMP" in os.environ:
-        host_server = os.environ["STMP"]
-    elif "SMTP" in os.environ:
+    if "STMP" in os.environ: # 之前拼写错误的历史残留
+        print("请填写SMTP，而不是STMP")
+        
+    if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
     else:
         host_server = 'smtp.qq.com'
