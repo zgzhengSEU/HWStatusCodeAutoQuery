@@ -97,10 +97,6 @@ def work(hwuid, password, your_email, email_password, host_server, start_time, d
 
         
 if __name__ == "__main__":
-    if "UID" in os.environ:
-        hwuid = os.environ["UID"]
-        print("请填写HWUID，而不是UID")
-
     if "HWUID" in os.environ:
         hwuid = os.environ["HWUID"]
     else:
@@ -125,10 +121,6 @@ if __name__ == "__main__":
         print("未找到 EMAILCODE！")
         sys.exit(1)
 
-    if "STMP" in os.environ: # 之前拼写错误的历史残留
-        print("请填写SMTP，而不是STMP")
-        sys.exit(1)
-        
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
         print("SMTP 服务器为：", host_server)
@@ -151,7 +143,7 @@ if __name__ == "__main__":
         print("请填写deviceFingerInfo，否则请检测是否运行成功，有可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
-    if len(sys.argv) > 0: # 添加快速测试
+    if len(sys.argv) > 1: # 添加快速测试
         print("[", datetime.now(), "] ", "开始运行测试job")
         queryStatus(hwuid, password, your_email, email_password, host_server, deviceFingerInfo)
         print("[", datetime.now(), "] ", "测试job结束，开始进入正式运行")
