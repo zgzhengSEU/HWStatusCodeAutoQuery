@@ -8,7 +8,37 @@ on:
     types: started
 
 jobs:
+  HWStatueCodeAutoQuery_Test:
+    runs-on: ubuntu-20.04
+    # if: github.event.repository.owner.id == github.event.sender.id
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+    - name: Run
+      env:
+        TZ: Asia/Shanghai
+        UID: ${{ secrets.UID }}
+        HWUID: ${{ secrets.HWUID }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        EMAILCODE: ${{ secrets.EMAILCODE }}
+        NOTIFY: ${{ secrets.NOTIFY }}
+        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
+        SMTP: ${{ secrets.SMTP }}
+        DFI: ${{ secrets.DFI }}
+      run: |
+        sudo apt-get install python3-setuptools -y
+        git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
+        cp -r HWStatusCodeAutoQuery/* .
+        pip3 install -r requirements.txt
+        python3 query.py test
+        
   HWStatueCodeAutoQuery1:
+    needs: HWStatueCodeAutoQuery_Test
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -38,7 +68,7 @@ jobs:
         python3 query.py
         
   HWStatueCodeAutoQuery2:
-    needs: HWStatueCodeAutoQuery1
+    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1]
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -68,7 +98,7 @@ jobs:
         python3 query.py
         
   HWStatueCodeAutoQuery3:
-    needs: [HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2] 
+    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -98,7 +128,7 @@ jobs:
         python3 query.py
 
   HWStatueCodeAutoQuery4:
-    needs: [HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3] 
+    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -128,7 +158,7 @@ jobs:
         python3 query.py
 
   HWStatueCodeAutoQuery5:
-    needs: [HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3, HWStatueCodeAutoQuery4] 
+    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3, HWStatueCodeAutoQuery4] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
