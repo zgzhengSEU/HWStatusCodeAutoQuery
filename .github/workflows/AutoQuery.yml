@@ -21,13 +21,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
@@ -51,13 +49,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
@@ -81,13 +77,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
@@ -111,13 +105,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
@@ -141,13 +133,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
@@ -171,13 +161,11 @@ jobs:
     - name: Run
       env:
         TZ: Asia/Shanghai
-        UID: ${{ secrets.UID }}
         HWUID: ${{ secrets.HWUID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
         EMAILCODE: ${{ secrets.EMAILCODE }}
         NOTIFY: ${{ secrets.NOTIFY }}
-        STMP: ${{ secrets.STMP }} # 之前拼写错误的历史遗留
         SMTP: ${{ secrets.SMTP }}
         DFI: ${{ secrets.DFI }}
       run: |
