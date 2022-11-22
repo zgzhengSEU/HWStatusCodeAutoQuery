@@ -99,26 +99,38 @@ def work(hwuid, password, your_email, email_password, host_server, start_time, d
 if __name__ == "__main__":
     if "HWUID" in os.environ:
         hwuid = os.environ["HWUID"]
+        if hwuid == '':
+            print("未找到 HWUID ！")
+            sys.exit(1) 
     else:
-        print("未找到 HWUID")
+        print("未找到 HWUID ！")
         sys.exit(1)
 
     if "PASSWORD" in os.environ:
         password = os.environ["PASSWORD"]
+        if password == '':
+            print("未找到 PASSWORD ！")
+            sys.exit(1) 
     else:
-        print("未找到 PASSWORD")
+        print("未找到 PASSWORD ！")
         sys.exit(1)
 
     if "EMAIL" in os.environ:
         your_email = os.environ["EMAIL"]
+        if your_email == '':
+            print("未找到 EMAIL ！")
+            sys.exit(1) 
     else:
-        print("未找到 EMAIL")
+        print("未找到 EMAIL ！")
         sys.exit(1)
 
     if "EMAILCODE" in os.environ:
         email_password = os.environ["EMAILCODE"]
+        if email_password == '':
+            print("未找到 EMAILCODE ！")
+            sys.exit(1) 
     else:
-        print("未找到 EMAILCODE！")
+        print("未找到 EMAILCODE ！")
         sys.exit(1)
 
     if "SMTP" in os.environ:
@@ -136,19 +148,24 @@ if __name__ == "__main__":
         notify = os.environ["NOTIFY"]
         if notify.lower() == "false":
             notify = False
+            print("关闭功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
         else:
             notify = True
             print("开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
     else:
         notify = True
+        print("开启功能：每日定时启动脚本时，发送提醒脚本运行成功邮件")
     
     if "DFI" in os.environ:
         deviceFingerInfo = os.environ["DFI"]
+        if deviceFingerInfo == '':
+            print("请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
+            deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     else:
-        print("请填写deviceFingerInfo，否则请检测是否运行成功，有可能会出错")
+        print("请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
-    if len(sys.argv) > 1 and sys.argv[1] == 'test': # 添加快速测试
+    if len(sys.argv) == 2 and sys.argv[1] == 'test': # 添加快速测试
         print("[", datetime.now(), "] ", "开始运行测试job")
         queryStatus(hwuid, password, your_email, email_password, host_server, deviceFingerInfo)
         print("[", datetime.now(), "] ", "测试job结束，开始进入正式运行")
@@ -156,7 +173,7 @@ if __name__ == "__main__":
     
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
-        if len(sys.argv) > 1 and sys.argv[1] == 'start':
+        if len(sys.argv) == 2 and sys.argv[1] == 'start':
             print("发送 每天脚本定时运行成功提醒")
             sendEmailStart(your_email, email_password, host_server)
 
