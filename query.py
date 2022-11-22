@@ -146,7 +146,7 @@ if __name__ == "__main__":
         print("请填写deviceFingerInfo，否则请检测是否运行成功，有可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
-    if len(sys.argv) > 1: # 添加快速测试
+    if len(sys.argv) > 1 and sys.argv[1] == 'test': # 添加快速测试
         print("[", datetime.now(), "] ", "开始运行测试job")
         queryStatus(hwuid, password, your_email, email_password, host_server, deviceFingerInfo)
         print("[", datetime.now(), "] ", "测试job结束，开始进入正式运行")
@@ -154,7 +154,7 @@ if __name__ == "__main__":
     
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
-        if len(sys.argv) > 1:
+        if len(sys.argv) > 1 and sys.argv[1] == 'start':
             print("开启 每天脚本定时运行时，发送启动成功提醒")
             sendEmailStart(your_email, email_password, host_server)
 
