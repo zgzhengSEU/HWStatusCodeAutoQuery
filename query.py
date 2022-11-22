@@ -70,16 +70,16 @@ def queryStatus(hwuid, password, email, passwd, host_server, deviceFingerInfo):
     session.get(logout_url, timeout=5, headers=headers)  # 新增退出登录逻辑
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-    print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ","当前状态码为：\n")
+    print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "当前状态码为：\n")
     for res in res_list:
         print(res)
     print()
     if res_list[0].split(':')[0] == '"IV_DATE"':
         sendEmail(email, passwd, host_server)
-        print("状态码变了！")
+        print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "状态码变了！")
         return True
     else:
-        print("继续爱信等！")
+        print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "继续爱信等！")
     print()
     return False
 
