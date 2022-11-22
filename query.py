@@ -152,7 +152,7 @@ if __name__ == "__main__":
         print("[", datetime.now(), "] ", "开始运行测试job")
         queryStatus(hwuid, password, your_email, email_password, host_server, deviceFingerInfo)
         print("[", datetime.now(), "] ", "测试job结束，开始进入正式运行")
-        sys.exit(1)
+        sys.exit(0)
     
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
