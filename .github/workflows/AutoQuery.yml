@@ -8,7 +8,7 @@ on:
     types: started
 
 jobs:
-  HWStatueCodeAutoQuery_Test:
+  Quick_Test_Job:
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -36,7 +36,7 @@ jobs:
         python3 query.py test
         
   HWStatueCodeAutoQuery1:
-    needs: HWStatueCodeAutoQuery_Test
+    needs: Quick_Test_Job
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -64,7 +64,7 @@ jobs:
         python3 query.py start
         
   HWStatueCodeAutoQuery2:
-    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1]
+    needs: [Quick_Test_Job, HWStatueCodeAutoQuery1]
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -92,7 +92,7 @@ jobs:
         python3 query.py
         
   HWStatueCodeAutoQuery3:
-    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2] 
+    needs: [Quick_Test_Job, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -120,7 +120,7 @@ jobs:
         python3 query.py
 
   HWStatueCodeAutoQuery4:
-    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3] 
+    needs: [Quick_Test_Job, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
@@ -148,7 +148,7 @@ jobs:
         python3 query.py
 
   HWStatueCodeAutoQuery5:
-    needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3, HWStatueCodeAutoQuery4] 
+    needs: [Quick_Test_Job, HWStatueCodeAutoQuery1, HWStatueCodeAutoQuery2, HWStatueCodeAutoQuery3, HWStatueCodeAutoQuery4] 
     runs-on: ubuntu-20.04
     # if: github.event.repository.owner.id == github.event.sender.id
     
