@@ -61,7 +61,7 @@ def queryStatus(hwuid, password, email, passwd, host_server, deviceFingerInfo):
     login_url = 'https://uniportal.huawei.com/uniportal/login.do'
     r = session.post(login_url, headers=headers, data=data, timeout=5)
     cur_time = datetime.now().timestamp()
-    print('当前时间为' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    print('\n 当前时间为：' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     time = int(cur_time * 1000)
     url = 'https://career.huawei.com/reccampportal/services/portal/portaluser/queryMyJobInterviewPortal5?reqTime='
     url = url + str(time)
@@ -70,7 +70,7 @@ def queryStatus(hwuid, password, email, passwd, host_server, deviceFingerInfo):
     session.get(logout_url, timeout=5, headers=headers)  # 新增退出登录逻辑
     res = html_src.content.decode('utf-8')
     res_list = res.split('{')[1][:-2].split(',')
-    print("当前状态码为：")
+    print("当前状态码为：\n")
     for res in res_list:
         print(res)
     print()
