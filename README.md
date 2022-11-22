@@ -1,5 +1,5 @@
 # 华为状态码自动查询工具
-**华为状态码自动查询工具，利用 Github Action 全天候24h后台监测状态码，爱信等 ALL IN 起来 ！！！**
+**华为状态码自动查询工具，利用 Github Action 全天候24h后台监测状态码，在线使用无需本地部署，爱信等 ALL IN 起来 ！！！**
 **状态码变了后会发邮件到设定的邮箱！**
 
 ![Stars](https://img.shields.io/github/stars/zgzhengSEU/HWStatusCodeAutoQuery.svg)
