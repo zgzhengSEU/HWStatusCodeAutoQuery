@@ -136,10 +136,9 @@ if __name__ == "__main__":
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
         if host_server == '':
-            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
+            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写SMTP，默认使用QQ邮箱)
             host_server = 'smtp.qq.com'            
-        else:
-            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "设置 SMTP 服务器为：", host_server)
+        print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "当前 SMTP 服务器为：", host_server)
     else:
         print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
         host_server = 'smtp.qq.com'
@@ -169,14 +168,12 @@ if __name__ == "__main__":
         print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "开始运行测试job")
         queryStatus(hwuid, password, your_email, email_password, host_server, deviceFingerInfo)
         print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "测试job结束，开始进入正式运行")
+        if notify:
+            # 每天脚本定时运行时，发送启动成功提醒
+            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "发送脚本运行成功邮件，请查收")
+            sendEmailStart(your_email, email_password, host_server)
         sys.exit(0)
     
-    if notify:
-        # 每天脚本定时运行时，发送启动成功提醒
-        if len(sys.argv) == 2 and sys.argv[1] == 'start':
-            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "发送 每天脚本定时运行成功提醒")
-            sendEmailStart(your_email, email_password, host_server)
-
     queryInterval = 1800  # 默认半小时查询一次
     start_time = datetime.now()
     print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "启动当前job")
