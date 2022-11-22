@@ -126,9 +126,10 @@ if __name__ == "__main__":
         if host_server == '':
             print("未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
             host_server = 'smtp.qq.com'            
-        print("未填写SMTP，SMTP 服务器为：", host_server)
+        else:
+            print("设置 SMTP 服务器为：", host_server)
     else:
-        print("默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
+        print("未填写SMTP，默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
         host_server = 'smtp.qq.com'
 
     if "NOTIFY" in os.environ:
