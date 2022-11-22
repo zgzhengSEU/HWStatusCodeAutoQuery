@@ -42,8 +42,10 @@
 | NOTIFY     | 选填 | 不填默认开启每日通知。每日定时启动脚本时，是否发送提醒脚本运行成功邮件。填true/false。  |
 
 **DFI设置教程** 
-1. [点击登录页面](https://uniportal.huawei.com/uniportal/?redirect=https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D42881)
-2. 页面右键后点击检查，或者按F12打开开发工具，在元素里面按 CTRL+F 搜索 deviceFingerInfo，将 value 填入 secret
+1. [点击登录页面，最好是在浏览器无痕/隐私模式下打开该链接](https://uniportal.huawei.com/uniportal/?redirect=https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D42881)
+2. 手动登录一次，因为可能提示有风险，需要输入手机验证码解除
+3. 退出登录，再次[该链接进入登录页面](https://uniportal.huawei.com/uniportal/?redirect=https%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Flogin_index.html%3Fredirect%3Dhttps%3A%2F%2Fcareer.huawei.com%2Freccampportal%2Fportal5%2Findex.html%3Fi%3D42881)
+4. 页面右键后点击检查，或者按F12打开开发工具，在元素里面按 CTRL+F 搜索 deviceFingerInfo，将 value 填入 secret
 ![image](https://user-images.githubusercontent.com/62554593/202986664-03230976-41de-4618-a132-189e493725fb.png)
 ![image](https://user-images.githubusercontent.com/62554593/202988457-d83b972e-af32-46c8-9d6d-1570e559ecdc.png)
 
