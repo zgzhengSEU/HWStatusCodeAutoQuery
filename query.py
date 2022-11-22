@@ -123,6 +123,9 @@ if __name__ == "__main__":
 
     if "SMTP" in os.environ:
         host_server = os.environ["SMTP"]
+        if host_server == '':
+            print("默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
+            host_server = 'smtp.qq.com'            
         print("SMTP 服务器为：", host_server)
     else:
         print("默认使用QQ邮箱，SMTP 服务器为 smtp.qq.com")
@@ -151,7 +154,9 @@ if __name__ == "__main__":
     
     if notify:
         # 每天脚本定时运行时，发送启动成功提醒
-        sendEmailStart(your_email, email_password, host_server)
+        if len(sys.argv) > 1:
+            print("开启 每天脚本定时运行时，发送启动成功提醒")
+            sendEmailStart(your_email, email_password, host_server)
 
     queryInterval = 1800  # 默认半小时查询一次
     start_time = datetime.now()
