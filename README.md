@@ -7,7 +7,7 @@
 
 请拉取最新代码！
 
-有问题提Issues一起讨论
+有问题可以看Issues，未解决的问题可以提Issues一起讨论
 
 注意 SMTP 不要写成 STMP
 
