@@ -99,9 +99,7 @@ def work(uid, password, your_email, email_password, host_server, start_time, dev
 if __name__ == "__main__":
     if "UID" in os.environ:
         uid = os.environ["UID"]
-    else:
-        print("未找到 UID")
-        # sys.exit(1)
+        print("请填写HWUID，而不是UID")
 
     if "HWUID" in os.environ:
         uid = os.environ["HWUID"]
