@@ -159,10 +159,10 @@ if __name__ == "__main__":
     if "DFI" in os.environ:
         deviceFingerInfo = os.environ["DFI"]
         if deviceFingerInfo == '':
-            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
+            print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写deviceFingerInfo。请检测是否运行成功，可能会出错")
             deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     else:
-        print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "请填写deviceFingerInfo，否则请检测是否运行成功，可能会出错")
+        print("[", datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "] ", "未填写deviceFingerInfo。请检测是否运行成功，可能会出错")
         deviceFingerInfo = 'bb84ac09e32b0ce23d488372c91a81d6'
     
     if len(sys.argv) == 2 and sys.argv[1] == 'test': # 添加快速测试
