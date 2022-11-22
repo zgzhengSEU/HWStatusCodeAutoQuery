@@ -61,7 +61,7 @@ jobs:
         git clone https://github.com/zgzhengSEU/HWStatusCodeAutoQuery.git
         cp -r HWStatusCodeAutoQuery/* .
         pip3 install -r requirements.txt
-        python3 query.py
+        python3 query.py start
         
   HWStatueCodeAutoQuery2:
     needs: [HWStatueCodeAutoQuery_Test, HWStatueCodeAutoQuery1]
